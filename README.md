@@ -8,12 +8,33 @@
 
 # Building/Running
 
+### Requirements
+
+- Linux (tested on Xubuntu)
+- `nasm`
+- `ld`
+- `objdump`
+- `make`
+- `gcc`
+- `sysctl`
+- `git`
+
+### Building
+
 To build the example and generate a C file containing your shellcode, clone the repo and run `make` from within the project folder.
 
 ```
 git clone httpsa://www.github.com/mikedesu/x86_64_shellcode_basics
 cd x86_64_shellcode_basics
 make
+```
+
+### Running
+
+To run, you're going to need to disable ASLR temporarily.
+
+```
+sudo sysctl -w kernel.randomize_va_space=0
 ```
 
 -----
