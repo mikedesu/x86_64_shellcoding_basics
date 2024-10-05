@@ -37,6 +37,12 @@ To run, you're going to need to disable ASLR temporarily.
 sudo sysctl -w kernel.randomize_va_space=0
 ```
 
+To re-enable ASLR:
+
+```
+sudo sysctl -w kernel.randomize_va_space=2
+```
+
 -----
 
 The motivation for this repo was to simplify getting started working with shellcoding in x86_64 assembly language.
